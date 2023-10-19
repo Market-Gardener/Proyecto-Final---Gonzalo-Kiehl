@@ -18,9 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from AppIsaac.views import(
     saludo,
+    usando_loader,
+    llave,
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/', saludo),
+    path('loader/', usando_loader),
+    path('llave/<nombre>/<numero>', llave),
 ]
