@@ -12,7 +12,27 @@
         <input type="name" name="nombre" id="nombre">
         <input type="submit" value="Buscar">
 
-    </form>
+    </form>    
+    
+    {% if item %}
+        
+    <p>Estamos buscando el item: {{nombre}}</p>
 
+    <ul>
+    {% for i in item %}
+        <li>{{i.nombre}}</li>
+        <li>{{i.precio}}</li>
+    {% endfor %}
+
+    </ul>
+
+    {% else %}
+    <p>No hay datos</p>
+
+
+    {% endif %}
+
+    <p style="colors: red;">{{respuesta}}</p>
+    
 </body>
 </html>
