@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Items</title>
+</head>
+<body>
+    
+    <form action="/App/buscar/" method="GET">
+        
+        <input type="name" name="nombre" id="nombre">
+        <input type="submit" value="Buscar">
+
+    </form>    
+    
+    {% if item %}
+        
+    <p>Estamos buscando el item: {{nombre}}</p>
+
+    <ul>
+    {% for i in item %}
+        <li>{{i.nombre}}</li>
+        <li>{{i.precio}}</li>
+    {% endfor %}
+
+    </ul>
+
+    {% else %}
+    <p>No hay datos</p>
+
+
+    {% endif %}
+
+    <p style="colors: red;">{{respuesta}}</p>
+    
+</body>
+</html>
