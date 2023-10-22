@@ -8,3 +8,4 @@ class FormUsuario(forms.Form):
     nombre = forms.CharField(max_length=30)
     personaje = forms.CharField(max_length=30)
     email = forms.EmailField()
+    
